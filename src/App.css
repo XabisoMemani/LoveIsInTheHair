@@ -1,0 +1,59 @@
+/* Rolling Text 3D hover effect styles */
+.rolling-text {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.5em;
+  text-decoration: none;
+}
+
+.rolling-text .block:last-child {
+  color: #e055a0;
+}
+
+.rolling-text:hover .letter {
+  transform: translateY(-100%);
+}
+
+.rolling-text .block {
+  display: block;
+}
+
+.rolling-text .letter {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff7fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 93, 154, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(42, 10, 24, 0.25);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(255, 185, 217, 0.55);
+  color: #30101f;
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+  body {
+    cursor: auto !important;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
+}

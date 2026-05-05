@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 336 60% 10%;
+    --card: 40 33% 97%;
+    --card-foreground: 336 60% 10%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 336 60% 10%;
+    --primary: 336 60% 10%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 330 30% 95%;
+    --secondary-foreground: 336 60% 10%;
+    --muted: 330 20% 94%;
+    --muted-foreground: 336 20% 40%;
+    --accent: 336 74% 62%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 330 20% 88%;
+    --input: 330 20% 88%;
+    --ring: 336 74% 62%;
+    --radius: 1rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono-accent {
+    font-family: 'Oxygen Mono', monospace;
+  }
+
+  .section-pad {
+    padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 4rem);
+  }
+
+  .hair-button {
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+  }
+
+  .hair-button-dark:hover {
+    background-color: #ffd0e5;
+    color: #30101f;
+    box-shadow: 0 18px 50px rgba(255, 208, 229, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .hair-button-soft:hover {
+    background-color: #30101f;
+    border-color: #30101f;
+    color: #fff8fb;
+  }
+
+  .hair-button-pink:hover {
+    background-color: #ffb9d9;
+    color: #30101f;
+    box-shadow: 0 16px 42px rgba(255, 185, 217, 0.22);
+  }
+
+  .hair-button-outline-dark:hover {
+    background-color: #ffb9d9;
+    border-color: #ffb9d9;
+    color: #30101f;
+  }
+}
+
+@keyframes bow-wag {
+  0%, 100% { transform: rotate(12deg) translateY(0); }
+  50% { transform: rotate(16deg) translateY(-2px); }
+}
+
+.animate-bow {
+  animation: bow-wag 3s ease-in-out infinite;
+}
