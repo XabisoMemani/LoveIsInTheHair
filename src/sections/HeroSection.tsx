@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 const heroVideos = [
-  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.46.mp4',
-  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.50.mp4',
-  '/videos%20and%20images/WhatsApp%20Video%202026-04-14%20at%2010.20.42.mp4',
-  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03.mp4',
+  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.46_small.webm',
+  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.50_small.webm',
+  '/videos%20and%20images/WhatsApp%20Video%202026-04-14%20at%2010.20.42_small.webm',
+  '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03_small.webm',
 ]
 
 export default function HeroSection() {
@@ -77,6 +77,7 @@ export default function HeroSection() {
             <video
               key={heroVideos[activeVideo]}
               src={heroVideos[activeVideo]}
+              poster={heroVideos[activeVideo].replace('_small.webm', '.jpg')}
               className="aspect-[9/16] w-full rounded-md object-cover"
               autoPlay
               muted
