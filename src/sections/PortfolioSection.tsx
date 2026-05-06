@@ -1,47 +1,49 @@
+const getVideoPoster = (videoPath: string) => videoPath.replace('_compressed.webm', '_small.jpg')
+
 const media = [
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.46.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.46_compressed.webm',
     title: 'Fresh braid finish',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.48.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.11.48_compressed.webm',
     title: 'Protective style detail',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.12.40.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.12.40_compressed.webm',
     title: 'Braiding process',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.49.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.49_compressed.webm',
     title: 'Styled finish',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.50.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.13.50_compressed.webm',
     title: 'Hair detail reel',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/littleone-1.mp4',
+    src: '/videos%20and%20images/littleone-1_compressed.webm',
     title: 'Kids styling',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-04-14%20at%2010.20.42.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-04-14%20at%2010.20.42_compressed.webm',
     title: 'Recent client style',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03_compressed.webm',
     title: 'Men braid style one',
   },
   {
     type: 'video',
-    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.06.mp4',
+    src: '/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.06_compressed.webm',
     title: 'Men braid style two',
   },
   {
@@ -91,6 +93,7 @@ export default function PortfolioSection() {
               {item.type === 'video' ? (
                 <video
                   src={item.src}
+                  poster={getVideoPoster(item.src)}
                   className="h-[260px] w-full rounded-md object-cover transition-transform duration-700 group-hover:scale-[1.03] md:h-[360px]"
                   autoPlay
                   muted

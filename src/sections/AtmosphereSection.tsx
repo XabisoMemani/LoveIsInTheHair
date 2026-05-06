@@ -24,8 +24,8 @@ export default function AtmosphereSection() {
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1fr] md:items-center">
         <div className="overflow-hidden rounded-lg border border-[#f1b5d0] bg-white p-2 shadow-[0_28px_80px_rgba(168,55,111,0.12)]">
           <video
-            src="/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03_small.webm"
-            poster="/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03.jpg"
+            src="/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03_compressed.webm"
+            poster="/videos%20and%20images/WhatsApp%20Video%202026-03-27%20at%2010.16.03_small.jpg"
             className="aspect-[4/5] w-full rounded-md object-cover"
             autoPlay
             muted
